@@ -33,11 +33,13 @@ echo Choose Your Platform :
 echo.
 echo 1. Riot
 echo 2. Garena
+echo 3. Back
 echo.
 
 set /p platform=
 if %platform%==1 goto Riot
 if %platform%==2 goto Garena
+if %platform%==3 goto onoroffq
 
 :Riot
 call:question
@@ -55,6 +57,7 @@ echo 8. Russia
 echo 9. Turkey
 echo 10. Japan
 echo 11. Korea
+echo 12. Back
 echo.
 set /p riots=
 if %riots%==1 goto NA
@@ -68,6 +71,7 @@ if %riots%==8 goto RU
 if %riots%==9 goto TR
 if %riots%==10 goto JP
 if %riots%==11 goto KR
+if %riots%==12 goto platformq
 
 :Garena
 call:question
@@ -78,11 +82,13 @@ echo 1. Singapore
 echo 2. Vietnam
 echo 3. Thailand
 echo 4. Taiwan
+echo 5. Back
 set /p garenas=
 if %garenas%==1 goto SG
-if %garenas%==1 goto VN
-if %garenas%==1 goto TH
-if %garenas%==1 goto TW
+if %garenas%==2 goto VN
+if %garenas%==3 goto TH
+if %garenas%==4 goto TW
+if %garenas%==5 goto platformq
 
 :NA
 set ip=na2.chat.si.riotgames.com
